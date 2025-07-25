@@ -10,6 +10,8 @@ export const myProjects = [
       "A watchList for your next binge watching ceremony",
       "Developed using TMDB API, and Firebase for the backend.",
     ],
+    LinkToWeb: 'https://watchthis-wizardamxn.vercel.app/',
+
     href: "",
     logo: "",
     image: "/assets/WatchThis.png",
@@ -38,6 +40,7 @@ export const myProjects = [
   },
   {
     id: 2,
+    LinkToWeb: 'https://amanahmad.vercel.app/',
     title: "Epic Portfolio!",
     description:
       "Portfolio of my own, its EPIC!",
@@ -73,5 +76,5 @@ export const myProjects = [
       },
     ],
   },
- 
+
 ];

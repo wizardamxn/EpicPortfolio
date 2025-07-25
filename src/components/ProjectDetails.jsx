@@ -6,7 +6,8 @@ const ProjectDetails = ({
   image,
   tags,
   href,
-  closeModal
+  closeModal,
+  LinkToWeb
 }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm">
@@ -33,7 +34,7 @@ const ProjectDetails = ({
               ))}
             </div>
           </div>
-          <a className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation">
+          <a target="_blank" href={LinkToWeb} className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation">
             View Project
             <img className="size-4" src="assets/arrow-up.svg" href={href} ></img>
           </a>

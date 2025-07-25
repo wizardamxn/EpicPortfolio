@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ProjectDetails from './ProjectDetails'
 
-const Project = ({title,description,subDescription,href,image,tags ,setPreview}) => { 
+const Project = ({title,description,subDescription,href,image,tags ,setPreview, LinkToWeb}) => { 
     const [isShowing ,setisShowing] = useState(false)
   return (
     <>
@@ -20,7 +20,7 @@ const Project = ({title,description,subDescription,href,image,tags ,setPreview})
     <div className='w-full bg-gradient-to-r from-transparent
      via-neutral-700 to-transparent h-[1px]'/>
      {isShowing && 
-     (<ProjectDetails title={title} description={description} subDescription={subDescription} image={image} tags={tags} href={href} closeModal={()=>setisShowing(false)}/>)}
+     (<ProjectDetails title={title} description={description} subDescription={subDescription} image={image} LinkToWeb={LinkToWeb} tags={tags} href={href} closeModal={()=>setisShowing(false)}/>)}
     </>
   )
 }
