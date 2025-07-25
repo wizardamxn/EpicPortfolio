@@ -30,16 +30,17 @@ const Contact = () => {
     try {
       console.log("From submitted:", formData);
       await emailjs.send(
-        "service_762ltly",
-        "template_rjdud1c",
+        import.meta.env.VITE_SERVICE_KEY,
+        import.meta.env.VITE_TEMPLATE_KEY,
         {
           from_name: formData.name,
           to_name: "Aman",
           from_email: formData.email,
           to_email: "amank225566@gmail.com",
           message: formData.message,
+          
         },
-         "Y1F0nknxGsfqCRmI0"
+        import.meta.env.VITE_PUBLIC_KEY
       );
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
@@ -51,7 +52,10 @@ const Contact = () => {
     }
   };
   return (
-    <section id="contact" className="relative flex items-center c-space section-spacingC">
+    <section
+      id="contact"
+      className="relative flex items-center c-space section-spacingC"
+    >
       <Particles
         className="absolute inset-0 -z-50"
         quantity={100}

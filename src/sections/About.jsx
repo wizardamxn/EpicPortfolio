@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useState } from "react";
-import Card from "../components/cARD.JSX";
+import Card from "../components/Card";
 import { Frameworks } from "../components/Frameworks";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { motion } from "motion/react";

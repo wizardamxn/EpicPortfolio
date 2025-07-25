@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function Navigation() {
+function Navigation({showNavMob}) {
   const navItems = [
     { label: "Home", href: "#home", padding: "px-5" },
     { label: "About", href: "#about", padding: "px-5" },
@@ -15,8 +15,9 @@ function Navigation() {
       {navItems.map(({ label, href, padding }) => (
         <li key={label} className="nav-li">
           <a
+            onClick={showNavMob}
             href={href}
-            className={`nav-link sm:border-0 border-2 rounded-xl p-1 ${padding} block`}
+            className={`nav-link  sm:border-0 border-2 rounded-xl p-1 ${padding} block`}
           >
             {label}
           </a>
@@ -52,7 +53,7 @@ const Navbar = () => {
             />
           </button>
           <nav className="hidden sm:flex">
-            <Navigation />
+            <Navigation  />
           </nav>
         </div>
       </div>
@@ -67,7 +68,7 @@ const Navbar = () => {
             className="block border-gray-200 overflow-hidden text-center sm:hidden"
           >
             <nav className="pb-5 h-screen">
-              <Navigation />
+              <Navigation showNavMob={() => setIsOpen(!isOpen)} />
             </nav>
           </motion.div>
         )}

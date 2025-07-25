@@ -8,6 +8,7 @@ import { useMediaQuery } from "react-responsive";
 import { easing } from "maath";
 import Loader from "../components/Loader";
 
+
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
   return (
@@ -40,7 +41,7 @@ const Hero = () => {
               />
             </Float>
             {/* Controls to rotate only (no zoom) */}
-            <OrbitControls enableZoom={false} />
+            {!isMobile && <OrbitControls enableZoom={false} />}
           </Suspense>
         </Canvas>
       </figure>
