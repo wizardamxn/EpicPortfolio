@@ -5,7 +5,6 @@ import { motion, useMotionValue, useSpring } from "motion/react";
 import { useMediaQuery } from "react-responsive";
 
 const Projects = () => {
-
   const isMobile = useMediaQuery({ maxWidth: 853 });
 
   const x = useMotionValue(0);
@@ -23,7 +22,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative c-space mb-[500px] sm:mb-96"
+      className="c-space mb-[500px]"
       onMouseMove={handleMouseMove}
     >
       <h2 className="text-heading">My Selected Projects</h2>

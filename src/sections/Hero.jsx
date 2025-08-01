@@ -8,13 +8,12 @@ import { useMediaQuery } from "react-responsive";
 import { easing } from "maath";
 import Loader from "../components/Loader";
 
-
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
   return (
     <section
-    id="home"
-      className="flex items-start justify-center md:items-start md:justify-start min-h-screen overflow-hidden c-space"
+      id="home"
+      className="flex items-start mb-[150px] justify-center md:items-start md:justify-start min-h-screen overflow-hidden c-space"
       style={{ userSelect: "none" }}
     >
       <HeroText />

@@ -81,7 +81,7 @@ const skillsData = [
   };
 
   return (
-    <section id='skills' className="c-space text-white min-h-screen">
+    <section id='skills' className="c-space text-white mb-[150px]">
       <div className="max-w-6xl mx-auto px-8 py-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

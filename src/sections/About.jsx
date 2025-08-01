@@ -52,7 +52,7 @@ const logoArray = [
   );
 
   return (
-    <section id="about" className="c-space section-spacing mb-40 sm:mb-0">
+    <section id="about" className="c-space mb-[250px] ">
       <h2 className="text-heading">About Me</h2>
       <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:auto-rows-[18rem] mt-12">
         <div className="grid-default-color grid-1 flex flex-col ">
