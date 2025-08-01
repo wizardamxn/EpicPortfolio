@@ -10,8 +10,8 @@ const data = [
   { 
     name: 'Blog/News Site', 
     'Basic Static': 0, 
-    'With CMS': 55000,
-    'E-commerce Ready': 85000 
+    'With CMS': 70000,
+    'E-commerce Ready': 105000 
   },
   { 
     name: 'Business Website', 
@@ -63,7 +63,7 @@ export default function WebsitePricingChart() {
       <div className=" rounded-xl shadow-lg p-6">
         <div className="mb-6">
           <h2 className="text-4xl font-bold text-gray-300 mb-2">
-            My Web Development Services & Pricing
+            My Web Development Services & Pricing*
           </h2>
           <p className="text-gray-200 text-xl">
             Professional website development pricing across different project types and complexity levels (₹)
@@ -119,7 +119,7 @@ export default function WebsitePricingChart() {
             />
           </BarChart>
         </ResponsiveContainer>
-        
+       
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
           <div className="bg-blue-50 p-4 rounded-lg">
             <div className="flex items-center mb-2">
@@ -145,6 +145,11 @@ export default function WebsitePricingChart() {
           </div>
         </div>
       </div>
+       <div className='w-full flex justify-center'>
+          <p className=''>
+  * Prices are estimated and flexible based on client needs, reach out to discuss your project.
+          </p>
+        </div>
     </div>
   );
 }
