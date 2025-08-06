@@ -9,8 +9,8 @@ const data = [
   },
   { 
     name: 'Blog/News Site', 
-    'Basic Static': 0, 
-    'With CMS': 70000,
+    'Basic Static': 40000, 
+    'With CMS': 60000,
     'E-commerce Ready': 105000 
   },
   { 

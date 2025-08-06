@@ -16,7 +16,7 @@ function App() {
       <Projects />
       <SkillsComponent />
 
-      <Pricing />
+      {/* <Pricing /> */}
       <Contact />
       <Footer />
     </div>
