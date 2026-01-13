@@ -1,80 +1,63 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
   return (
-    <footer id="footer" className="c-space text-neutral-400 text-sm pb-5">
-      {/* Top gradient line */}
-      <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full mb-4" />
+    // Full width, matching the dark theme, with a subtle top border
+    <footer className="w-full bg-[#030412] border-t border-white/10 pt-10 pb-8 z-20 relative">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          
+          {/* Copyright - Tech Mono Style */}
+          <div className="text-center md:text-left">
+            <p className="text-gray-500 text-xs md:text-sm font-medium tracking-wide">
+              © 2026 AMAN AHMAD. ALL RIGHTS RESERVED.
+            </p>
+          </div>
 
-      {/* Footer content */}
-      <div className="flex flex-wrap items-center justify-between gap-5">
-        {/* Copyright */}
-        <p className="text-xs sm:text-sm">
-          © 2025 Aman Ahmad. All rights reserved.
-        </p>
-
-        {/* Social Icons */}
-        <div className="flex gap-8">
-          <a
-            href="https://www.instagram.com/aman_ahmad04"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            title="Instagram"
-            className="cursor-pointer"
-          >
-            <img
-              className="w-6 h-6 sm:w-7 sm:h-7"
-              src="assets/socials/instagram.svg"
-              alt="Instagram"
+          {/* Social Icons - Interactive Buttons */}
+          <div className="flex gap-4">
+            <SocialLink 
+                href="https://github.com/wizardamxn" 
+                src="assets/logos/icons8-github.svg" 
+                alt="GitHub" 
             />
-          </a>
-          <a
-            href="https://linkedin.com/in/wizardamxn"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            title="LinkedIn"
-            className="cursor-pointer"
-          >
-            <img
-              className="w-6 h-6 sm:w-7 sm:h-7"
-              src="assets/socials/linkedIn.svg"
-              alt="LinkedIn"
+            <SocialLink 
+                href="https://linkedin.com/in/wizardamxn" 
+                src="assets/socials/linkedIn.svg" 
+                alt="LinkedIn" 
             />
-          </a>
-          <a
-            href="https://wa.me/916263745609"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            title="WhatsApp"
-            className="cursor-pointer"
-          >
-            <img
-              className="w-6 h-6 sm:w-7 sm:h-7"
-              src="assets/socials/whatsApp.svg"
-              alt="WhatsApp"
+            <SocialLink 
+                href="https://www.instagram.com/aman_ahmad04" 
+                src="assets/socials/instagram.svg" 
+                alt="Instagram" 
             />
-          </a>
-          <a
-            href="https://github.com/wizardamxn"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            title="GitHub"
-            className="cursor-pointer"
-          >
-            <img
-              className="w-6 h-6 sm:w-7 sm:h-7"
-              src="assets/logos/icons8-github.svg"
-              alt="GitHub"
+            <SocialLink 
+                href="https://wa.me/916263745609" 
+                src="assets/socials/whatsApp.svg" 
+                alt="WhatsApp" 
             />
-          </a>
+          </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+// Reusable Social Button Component
+const SocialLink = ({ href, src, alt }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={alt}
+    className="group flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+  >
+    <img
+      src={src}
+      alt={alt}
+      className="w-5 h-5 opacity-60 group-hover:opacity-100 transition-opacity duration-300"
+    />
+  </a>
+);
+
+export default Footer;
