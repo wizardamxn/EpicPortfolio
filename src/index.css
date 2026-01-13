@@ -137,3 +137,35 @@ body {
 .field-input-focus {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
 }
+
+
+/* --- MASTER DESIGNER SCROLLBAR --- */
+
+/* 1. The Width */
+::-webkit-scrollbar {
+  width: 10px; /* Slim but usable */
+  height: 10px; /* For horizontal scrollbars */
+}
+
+/* 2. The Track (Background) - Matches your site bg */
+::-webkit-scrollbar-track {
+  background: #030412; 
+}
+
+/* 3. The Thumb (Handle) - Dark Gray with a border for a "floating" look */
+::-webkit-scrollbar-thumb {
+  background: #333333; 
+  border-radius: 9999px; /* Pill shape */
+  border: 2px solid #030412; /* Creates a gap between thumb and track */
+}
+
+/* 4. Hover State - Lights up slightly so you know you grabbed it */
+::-webkit-scrollbar-thumb:hover {
+  background: #666666; 
+}
+
+/* Firefox Support (Firefox uses different properties) */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #333333 #030412;
+}
